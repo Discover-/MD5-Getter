@@ -33,7 +33,7 @@ namespace Get_MD5
                 if (!File.Exists(dirOrFileName))
                 {
                     Console.WriteLine("\n\nThe given file could not be located. Press any key to try over.\n\n");
-                    Console.ReadLine();
+                    Console.ReadKey();
                     goto TryOverGoto;
                 }
 
@@ -53,7 +53,7 @@ namespace Get_MD5
                 CloseClipboard();
                 Marshal.FreeHGlobal(ptr);
 
-                Console.ReadLine();
+                Console.ReadKey();
                 goto TryOverGoto;
             }
             else
@@ -61,7 +61,7 @@ namespace Get_MD5
                 if (!Directory.Exists(dirOrFileName))
                 {
                     Console.WriteLine("\n\nThe given directory could not be located. Press any key to try over.\n\n");
-                    Console.ReadLine();
+                    Console.ReadKey();
                     goto TryOverGoto;
                 }
 
@@ -93,7 +93,7 @@ namespace Get_MD5
 
                 thrownExceptions = String.Empty;
                 Console.WriteLine("\nPress any key to start from the beginning.");
-                Console.ReadLine();
+                Console.ReadKey();
                 goto TryOverGoto;
             }
         }
