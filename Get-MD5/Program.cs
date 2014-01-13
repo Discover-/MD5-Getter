@@ -71,7 +71,7 @@ namespace Get_MD5
 
                 foreach (string file in _arrayFiles)
                 {
-                    if (!Path.HasExtension(file))
+                    if (String.IsNullOrEmpty(file))
                         continue;
 
                     string md5Hash = GetMD5HashFromFile(file);
